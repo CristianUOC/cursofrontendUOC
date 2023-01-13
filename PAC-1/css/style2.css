@@ -1,0 +1,306 @@
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+}
+/*MENU NAVEGACIÓN - RESPONSIVE*/
+
+nav {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 0 5%;
+    height: 100px;
+    background-color: black;
+}
+
+
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;    
+}
+
+nav .texto-logo {
+    font-size: 35px;
+    color:#f8991c;
+    /*white-space: nowrap;   --   Para que no haga saltos de línea*/
+}
+
+nav .lista {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .lista li {
+    list-style: none;
+}
+
+nav .lista a {
+    display:block;
+    text-transform: uppercase;
+    padding:15px;
+    font-size: 16px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
+
+nav .lista a:hover {
+    border-bottom: 4px solid #f8991c;
+    color:#f8991c;
+}
+
+#toggle {
+    position: absolute;
+    top: -100px;  
+}
+
+nav .icon-bars {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-bars .line {
+    width: 30px;
+    height: 5px;
+    background-color: #f8991c;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+    nav .logo{
+        float: none;
+        width: auto;
+        justify-content: center;
+        width: 100%;
+    }
+    nav .lista {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgb(0, 0, 0);
+        overflow:hidden;
+        transition: all .5s ease-in-out;
+    }
+
+    nav .lista a {
+        font-size: 20px;
+    }
+
+    nav :checked ~ .lista {
+        bottom: 0;
+    }
+
+    nav .icon-bars {
+        display: block;
+    }
+}
+    /*FIN ESTILO MENÚ*/
+
+
+
+/*BANNER (Mi portfolio -> Mis logros Pokémon*/
+
+.bannerprincipal {
+    background-image: url(../imagenes/banner-intro.jpg);
+    height: 25rem;
+    place-content: center;
+    display:grid;
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+}
+
+.bannerprincipal > h1 {
+    font-size: 35px;
+    color: white;
+    background-color: rgba(5, 4, 4, 0.699);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/*CONTENIDO PRINCIPAL*/
+
+.presentacion {
+    display:flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.texto-intro {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.texto-intro p {
+    width: 90%;
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+
+/*PROYECTOS -> POKE-PROYECTOS*/
+
+.conjuntoproyectos {
+    margin-bottom: 10%;
+}
+
+.conjuntoproyectos  h2 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.proyectos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    gap: 0%;
+}
+
+.proyectox {
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px -1px 6px black;
+    height: 28rem;
+    margin-bottom: 5%;
+    height: 33rem;
+}
+
+.proyectox img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.proyectox p {
+    width:90%;
+    margin: 1rem auto;
+    font-size: 1.5 rem;
+    line-height: 30px;
+}
+
+.proyectox button {
+    background-color: black;
+    color: white;
+    width: 45%;
+    padding: 2.5%;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+/*EXPERIENCIAS*/
+
+.bloquexp {
+    background-color: black;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.bloquexp h2 {
+    color:white;
+    margin-bottom: 10%;
+    margin-top:50px;
+}
+
+.experiencia {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    margin-bottom: 10%;
+    color: white;
+}
+
+/*Test de propiedad para gráfico circular*/
+@property --p {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .pie {
+    --p:20;
+    --b:30px;
+    --c:darkred;
+    --w:360px;
+    
+    width:var(--w);
+    aspect-ratio:1;
+    position:relative;
+    display:inline-grid;
+    margin:5px;
+    place-content:center;
+    font-size:48px;
+    font-weight:bold;
+    font-family:sans-serif;
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset:calc(50% - var(--b)/2);
+    background:var(--c);
+    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation:p 1s .5s both;
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }
+  @keyframes p {
+    from{--p:0}
+  }
+  
+  body {
+    background:#ddd;
+  }
+
+/* AFICIONES */
+

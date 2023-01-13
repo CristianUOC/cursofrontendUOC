@@ -1,0 +1,85 @@
+/* HEADER */
+/*Mini menú horizontal WEB + Iconos Redes Sociales*/
+
+
+
+
+/*SECCIÓN PRINCIPAL - DIV LOGO */
+header{
+    background-color: rgb(24, 18, 18);
+}
+
+.cabecera-main{
+    background-color: rgb(24, 18, 18);
+    display:flex;
+    justify-content: center;
+}
+.logo{
+    text-align: center;
+}
+.texto-alineado-logo{
+    vertical-align: middle;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+/*Cabecera - Versión Chrome*/
+h1.Texto-Logo,img{
+        background: linear-gradient(yellow,red);
+        color: transparent;
+        -webkit-background-clip:text;
+        font-size: 50px;
+        display:inline-block;
+    }    
+/*Cabecera - Versión Firefox*/
+h1.Texto-Logo{
+     background: -webkit-linear-gradient(yellow,red);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     color: tomato;  
+     font-size: 50px;
+    }
+
+/* SECCIÓN PRINCIPAL - DIV MENÚ*/
+    
+.mini-nav{
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    position:relative;
+    z-index: 100;
+  }
+  
+  nav {
+    float: left;
+  }
+  
+  nav ul {
+    list-style: none;
+    overflow: hidden; 
+  }
+  
+  nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  nav ul li:hover {
+    background: #eca023;
+  }    
+    
+    
+    
+    
+    
+    article.articulos{
+    background-color: rgb(179, 153, 204);
+    border-radius: 20px;
+    border-style: double;
+    border-color: black;
+}
